@@ -1,0 +1,12 @@
+extends layout
+block content
+	.kt-container.kt-container--fluid.kt-grid__item.kt-grid__item--fluid
+		.col-5(style="margin:auto")
+			center
+				.kt-media.kt-media--xl.kt-media--circle
+					img(src="uploads/"+user.img_url alt="")
+				br
+				| Hey 
+				=user.firstname
+				br
+				| Please select a chat to start messaging

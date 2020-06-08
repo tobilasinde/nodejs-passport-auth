@@ -1,0 +1,30 @@
+extends ../../layout
+
+block content
+    .kt-container.kt-container--fluid.kt-grid__item.kt-grid__item--fluid
+        form(action='/profile_update' method='post' enctype="multipart/form-data" class='well')
+            h5(style="color:red")= message
+            .form-group
+                .kt-avatar.kt-avatar--outline(id="kt_user_avatar")
+                    .kt-media.kt-media--xl.kt-media--circle
+                        img(src="uploads/"+user.img_url alt="")
+                    label.kt-avatar__upload(data-toggle="kt-tooltip" title="" data-original-title="Change avatar")
+                      .fa.fa-pen
+                      input(type="file" name="avatar")
+                    .kt-avatar__cancel(data-toggle="kt-tooltip" title="" data-original-title="Cancel avatar")
+                      .fa.fa-times
+                .form-text.text-muted Appected file formats: .png, .jpg, .jpeg
+                label(for='firstname')
+                    | Firstname
+                input.form-control#firstname(type='text' name='firstname' value=user.firstname)
+                label(for='lastname')
+                    | Lastname
+                input.form-control#lastname(type='text' name='lastname' value=user.lastname)
+                label(for='username')
+                    | Username
+                input.form-control#username(type='text' name='username' value=user.username)
+                label(for='username')
+                    | Email address
+                input.form-control#email(type='email' name='email' aria-describedby='emailHelp' value=user.email)
+                input.btn.btn-primary.form-control(type='submit' value="Update Profile")
+                i(class='fe-send')

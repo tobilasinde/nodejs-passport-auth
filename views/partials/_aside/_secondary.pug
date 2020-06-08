@@ -1,0 +1,13 @@
+
+//-  begin::Aside Secondary 
+div(class="kt-aside__secondary")
+    div(class="kt-aside__secondary-top")
+        h2(class="kt-aside__secondary-title")
+            = title
+            //-  To hide the secondary menu remove "kt-aside--secondary-enabled" class from the body tag and remove below "kt-aside__secondary-bottom" block
+    div(class="kt-aside__secondary-bottom")
+        //-  begin:: Aside Menu
+        div(id="kt_aside_menu" class="kt-aside-menu  aziko " data-ktmenu-vertical="1" data-ktmenu-scroll="1")
+            div(class="input-group")
+                input(type="text" id="searchbar" onkeyup="search()" name='search' class="form-control" placeholder="Search for users or chats..." aria-label="Search for messages or users...")
+            block secondary

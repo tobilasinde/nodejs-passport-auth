@@ -1,0 +1,155 @@
+doctype html
+html
+	head
+		base(href="")
+		meta(charset="utf-8")
+		title= title
+		meta(name="description" content="Latest updates and statistic charts")
+		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+
+		//- begin::Fonts
+		link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700")
+
+		//- end::Fonts
+
+		//- begin::Page Vendors Styles(used by this page)
+		link(href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css")
+
+		//- end::Page Vendors Styles
+
+		//- begin::Global Theme Styles(used by all pages)
+		link(href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css")
+		link(href="assets/css/style.bundle.css" rel="stylesheet" type="text/css")
+
+		//- end::Global Theme Styles
+
+		link(href="assets/css/pages/wizards/wizard-v3.css" rel="stylesheet" type="text/css")
+
+		//- begin::Layout Skins(used by all pages)
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript")
+		//- end::Layout Skins
+		link(rel="shortcut icon" href="assets/media/logos/favicon.ico" )
+
+	//-  end::Head
+
+	//-  begin::Body
+	body(class="kt-demo-panel--right kt-header-mobile--fixed kt-page-content-white kt-subheader--fixed kt-subheader--enabled kt-aside--secondary-enabled kt-offcanvas-panel--left kt-footer--fixed kt-aside--left kt-page--loading")
+		include partials/_mobile-header/base
+		div(class="kt-grid kt-grid--hor kt-grid--root")
+			div(class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page")
+				include partials/_aside/base
+				div(class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper" style="margin-left: 400px;")
+					include partials/_subheader/subheader-v1
+					div(class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content")
+						block content
+						block message	
+					//- include partials/_footer/base
+
+		//-  begin::Global Config(global config for global JS sciprts)
+		script(
+			var KTAppOptions = {
+				"colors": {
+					"state": {
+						"brand": "#3699ff",
+						"metal": "#c4c5d6",
+						"light": "#ffffff",
+						"accent": "#00c5dc",
+						"primary": "#5867dd",
+						"success": "#34bfa3",
+						"info": "#36a3f7",
+						"warning": "#ffb822",
+						"danger": "#fd3995",
+						"focus": "#9816f4"
+					},
+					"base": {
+						"label": [
+							"#c5cbe3",
+							"#a1a8c3",
+							"#3d4465",
+							"#3e4466"
+						],
+						"shape": [
+							"#f0f3ff",
+							"#d9dffa",
+							"#afb4d4",
+							"#646c9a"
+						]
+					}
+				}
+			}
+		)
+		//-  end::Global Config
+
+		//- begin::Global Theme Bundle(used by all pages)
+		script(src="assets/plugins/global/plugins.bundle.js" type="text/javascript")
+		script(src="assets/js/scripts.bundle.js" type="text/javascript")
+
+		//- end::Global Theme Bundle
+
+		//- begin::Page Vendors(used by this page)
+		script(src="assets/plugins/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript")
+
+		//- end::Page Vendors
+
+		//- begin::Page Scripts(used by this page)
+		script(src="assets/js/pages/dashboard.js" type="text/javascript")
+		script(src="assets/js/pages/components/forms/widgets/autosize.js" type="text/javascript")
+		script(src="assets/js/pages/custom/users/add.js" type="text/javascript")
+		script(src="assets/js/pages/components/forms/widgets/select2.js" type="text/javascript")
+		script(src="assets/js/search.js")
+		script(src="assets/js/pages/custom/profile/overview-1.js" type="text/javascript")
+
+		//- message script
+		//- script(src="assets/js/jquery.js" type="text/javascript")
+
+
+
+
+//- //-  begin:: Page
+
+//- //- [html-partial:include:{"file":"partials/_mobile-header/base.html"}]/--)
+
+//- //-  begin:: Root
+//- div(class="kt-grid kt-grid--hor kt-grid--root")
+
+//- 	//-  begin:: Page
+//- 	div(class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page")
+
+//- 		//- [html-partial:include:{"file":"partials/_aside/base.html"}]/--)
+
+//- 		//-  begin:: Wrapper
+//- 		div(class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper")
+
+//- 			//- [html-partial:include:{"file":"partials/_subheader/subheader-v1.html"}]/--)
+//- 			div(class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content")
+
+//- 				//- [html-partial:include:{"file":"partials/_content/base.html"}]/--)
+//- 			</div)
+
+//- 			//- [html-partial:include:{"file":"partials/_footer/base.html"}]/--)
+//- 		</div)
+
+//- 		//-  end:: Wrapper
+//- 	</div)
+
+//- 	//-  end:: Page
+//- </div)
+
+//- //-  end:: Root
+
+//- //-  end:: Page
+
+//- //- [html-partial:include:{"file":"partials/_topbar/offcanvas/search.html"}]/--)
+
+//- //- [html-partial:include:{"file":"partials/_topbar/offcanvas/notifications.html"}]/--)
+
+//- //- [html-partial:include:{"file":"partials/_topbar/offcanvas/user.html"}]/--)
+
+//- //- [html-partial:include:{"file":"partials/_quick-panel.html"}]/--)
+
+//- //- [html-partial:include:{"file":"partials/_scrolltop.html"}]/--)
+
+//- //- [html-partial:include:{"file":"partials/_demo-panel.html"}]/--)
+
+//- //- [html-partial:include:{"file":"partials/_toolbar.html"}]/--)

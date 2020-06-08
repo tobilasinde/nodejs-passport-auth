@@ -1,0 +1,16 @@
+extends ../../layout
+
+block secondary
+  each user in users
+    if(user.id != me.id)
+      .searching
+        .col-xl-12.col-lg-12(style="padding-left: 5px;padding-right: 5px;")
+          .kt-portlet.kt-portlet--height-fluid(style="margin-top: 20px;")
+            .kt-portlet__body(style="padding-left: 5px;padding-right: 5px;")
+              .kt-widget.kt-widget--general-1
+                .kt-media.kt-media--lg.kt-media--circle
+                  img(src="assets/media/users/300_22.jpg" alt="image")
+                .kt-widget__wrapper
+                  .kt-widget__label
+                    a.kt-widget__title(href='/message' + user.id)
+                      =user.firstname + ' ' + user.lastname

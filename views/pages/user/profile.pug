@@ -1,0 +1,55 @@
+extends ../../layout
+
+block secondary
+    .kt-portlet.kt-widget.kt-widget--fit.kt-widget--general-3(style="margin:20px")
+        .kt-portlet__body(style="margin:auto")
+            .kt-widget__top
+                .kt-media.kt-media--xl.kt-media--circle
+                    img(src="uploads/"+user.img_url alt="")
+            b=user.firstname + ' ' + user.lastname
+    .kt-portlet(style="margin:20px")
+        .kt-portlet__body(style="padding: 20px")
+            ul.kt-nav.kt-nav--bolder.kt-nav--fit-ver.kt-nav--v4(role="tablist")
+                li.kt-nav__item
+                    .kt-nav__link(style="padding: 20px 0px")
+                        span.kt-nav__link-icon
+                            i.flaticon2-user
+                        span.kt-nav__link-text
+                            =user.username
+                .kt-portlet__separator
+                li.kt-nav__item
+                    .kt-nav__link(style="padding: 20px 0px")
+                        span.kt-nav__link-icon
+                            i.flaticon2-phone
+                        span.kt-nav__link-text
+                            =user.phone
+                .kt-portlet__separator
+                li.kt-nav__item
+                    .kt-nav__link(style="padding: 20px 0px")
+                        span.kt-nav__link-icon
+                            i.flaticon-email
+                        span.kt-nav__link-text
+                            =user.email
+    .kt-portlet(style="margin:20px")
+        .kt-portlet__body(style="padding: 20px")
+            ul.kt-nav.kt-nav--bolder.kt-nav--fit-ver.kt-nav--v4(role="tablist")
+                li.kt-nav__item
+                    a.kt-nav__link(style="padding: 20px 0px" href="")
+                        span.kt-nav__link-icon
+                            i.flaticon-twitter-logo
+                        span.kt-nav__link-text
+                            | Twitter
+                .kt-portlet__separator
+                li.kt-nav__item
+                    .kt-nav__link(style="padding: 20px 0px")
+                        span.kt-nav__link-icon
+                            i.flaticon-facebook-logo-button
+                        span.kt-nav__link-text
+                            | Facebook
+                .kt-portlet__separator
+                li.kt-nav__item
+                    .kt-nav__link(style="padding: 20px 0px")
+                        span.kt-nav__link-icon
+                            i.flaticon-email
+                        span.kt-nav__link-text
+                            | Github
